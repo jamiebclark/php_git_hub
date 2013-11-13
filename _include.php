@@ -1,13 +1,13 @@
 <?php
-if (!defined(DS)) {
-	define(DS, DIRECTORY_SEPARATOR);
+if (!defined('DS')) {
+	define('DS', DIRECTORY_SEPARATOR);
 }
 
 $dir = dirname(__FILE__);
-require_once $dir . 'include' . DS . "git_hub_hook.php";
+require_once $dir . DS . 'include' . DS . "service_hook.php";
 
-if (!is_file($dir . 'config.php')) {
+if (!is_file($dir . DS . 'config.php')) {
 	throw new Exception('No config file found.');
 } else {
-	require_once $dir . 'config.php';
+	require_once $dir . DS . 'config.php';
 }

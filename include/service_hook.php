@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 set_time_limit(3600);
 
-class GitHubHook {
+class ServiceHook {
 	public $root = '~';
 	
 	public $logFile;
@@ -69,7 +69,7 @@ class GitHubHook {
 		if (!$success) {
 			throw new Exception("Could not find OS");
 		} else {
-			this->_os = $os;
+			$this->_os = $os;
 		}		
 	}
 	
