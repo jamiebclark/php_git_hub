@@ -21,3 +21,6 @@ $logFile = '';
 
 //The OS of the system
 $os 		= 'Linux';
+
+//If set to true, it won't actually do any system calls
+$testMode 	= true;

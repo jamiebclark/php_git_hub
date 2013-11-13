@@ -1,6 +1,9 @@
 <?php
 require_once '_include.php';
 $ServiceHook = new ServiceHook();
+if (isset($testMode)) {
+	$ServiceHook->setTestMode($testMode);
+}
 if (isset($os)) {
 	$ServiceHook->setOs($os);
 }

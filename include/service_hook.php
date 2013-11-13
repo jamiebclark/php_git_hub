@@ -86,6 +86,11 @@ class ServiceHook {
 	public function setRepositories($repositories) {
 		$this->repositories = $repositories;
 	}
+	
+	public function setTestMode($testMode = true) {
+		$this->test = $testMode;
+	}
+	
 	#endregion
 	
 	//Private functions
