@@ -19,6 +19,8 @@ class ServiceHook {
 	private $_osTypes = array('Linux', 'Windows');
 	private $_os = 0;
 	
+	private $test = true;
+	
 	public function fetch($repositories = null) {
 		if (!empty($repositories)) {
 			$this->setRepositories($repositories);
@@ -152,6 +154,11 @@ class ServiceHook {
 	}
 	
 	private function syscall ($cmd, $cwd = null) {
+		if ($this->test) {
+			$this->log('TESTING, System call skipped');
+			return '';
+		}
+
 		$descriptorspec = array(
 			1 => array('pipe', 'w') // stdout is a pipe that the child will write to
 		);
