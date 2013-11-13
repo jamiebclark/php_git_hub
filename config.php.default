@@ -1,0 +1,23 @@
+<?php
+/**
+ * Format your repository request using 
+ * 	GitName => array(
+ *		- Branch 1 => Branch 1 Location
+ *		- Branch 2 => Branch 2 Location
+ *	)
+ 
+$repositories = array(
+	'repository_name' => array(
+		'development' => '~/development/',
+		'production' => '~/public_html/',
+	)
+);
+
+ **/
+$repositories = array();
+
+//If you want to log your progress, set a log file:
+$logFile = '';
+
+//The OS of the system
+$os 		= 'Linux';
